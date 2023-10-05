@@ -12,20 +12,21 @@ Command "cd":
        [user@sahara ~]$ 
        ~~~
     2. path to a directory as an argument: The command takes the console into the lecture1 directory
-       ```
+       ~~~
         [user@sahara ~]$ cd lecture1
         [user@sahara ~/lecture1]$ 
-       ```
+       ~~~
     3. path to a file as an argument: the command returns an error because en-us.txt is not a directory
-       ```
+       ~~~
        [user@sahara ~]$ cd lecture1/messages/en-us.txt
        bash: cd: lecture1/messages/en-us.txt: Not a directory
        [user@sahara ~]$ 
-       ```
-Command "cd": 
+       ~~~
+Command "ls": 
     1. No arguments: The output after entering "cd" makes the console stay in the same directory
        ~~~
-       [user@sahara ~]$ cd
+       [user@sahara ~]$ ls
+        lecture1
        [user@sahara ~]$ 
        ~~~
     2. path to a directory as an argument: The command takes the console into the lecture1 directory
