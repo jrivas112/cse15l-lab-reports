@@ -54,14 +54,15 @@ lecture1/messages/en-us.txt
 ~~~console
 [user@sahara ~/lecture1/messages]$ cat
 ~~~
-2. path to a directory as an argument: The command displays all the files and directories in the lecture1 directory
+2. path to a directory as an argument: The command prints informs us that the thing we are trying to "cat" is a directory
 ~~~console
-[user@sahara ~]$ ls lecture1
-Hello.class  Hello.java  messages  README
+[user@sahara ~]$ cat lecture1
+cat: lecture1: Is a directory
 [user@sahara ~]$
 ~~~
-3. path to a file as an argument: the command prints the relative path of the file
+3. path to a file as an argument: the command prints out the content of the file "en-us.txt"
 ```console
-[user@sahara ~]$ ls lecture1/messages/en-us.txt
-lecture1/messages/en-us.txt
+[user@sahara ~]$ cat lecture1/messages/en-us.txt
+Hello World!
+[user@sahara ~]$
 ```
