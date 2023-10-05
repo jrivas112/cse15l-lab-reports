@@ -5,12 +5,12 @@ Share an example of using the command w
 Share an exmaple of using the command with a path to a directory as an argument.
 Share an example of using the command with a path to a file as an argument.
 
-## Command "cd": 
+Command "cd": 
     1. No arguments: The output after entering "cd" makes the console stay in the same directory
-       ```
+       ~~~
        [user@sahara ~]$ cd
        [user@sahara ~]$ 
-       ```
+       ~~~
     2. path to a directory as an argument: The command takes the console into the lecture1 directory
        ```
         [user@sahara ~]$ cd lecture1
@@ -22,20 +22,20 @@ Share an example of using the command with a path to a file as an argument.
        bash: cd: lecture1/messages/en-us.txt: Not a directory
        [user@sahara ~]$ 
        ```
-## Command "cd": 
+Command "cd": 
     1. No arguments: The output after entering "cd" makes the console stay in the same directory
-       ```
+       ~~~
        [user@sahara ~]$ cd
        [user@sahara ~]$ 
-       ```
+       ~~~
     2. path to a directory as an argument: The command takes the console into the lecture1 directory
-       ```
+       ~~~
         [user@sahara ~]$ cd lecture1
         [user@sahara ~/lecture1]$ 
-       ```
+       ~~~
     3. path to a file as an argument: the command returns an error because en-us.txt is not a directory
-       ```
+       ~~~
        [user@sahara ~]$ cd lecture1/messages/en-us.txt
        bash: cd: lecture1/messages/en-us.txt: Not a directory
        [user@sahara ~]$ 
-       ```
+       ~~~
