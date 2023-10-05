@@ -21,6 +21,7 @@ Share an example of using the command with a path to a file as an argument.
        bash: cd: lecture1/messages/en-us.txt: Not a directory
        [user@sahara ~]$ 
        ~~~
+       
 ## Command "ls": 
     1. No arguments: The output after entering "cd" makes the console stay in the same directory
        ~~~
