@@ -32,37 +32,50 @@ bash: cd: lecture1/messages/en-us.txt: Not a directory
 ## Command "ls" 
 
 1. No arguments: The output after entering "ls" makes the console stay in the same directory
+
 ~~~console
 [user@sahara ~]$ ls
 lecture1
 [user@sahara ~]$ 
 ~~~
+
 2. path to a directory as an argument: The command displays all the files and directories in the lecture1 directory
+
 ~~~console
 [user@sahara ~]$ ls lecture1
 Hello.class  Hello.java  messages  README
 [user@sahara ~]$
 ~~~
+
 3. path to a file as an argument: the command prints the relative path of the file
+
 ```console
 [user@sahara ~]$ ls lecture1/messages/en-us.txt
 lecture1/messages/en-us.txt
 ```
+
 ## Command "cat" 
 
 1. No arguments: The command waits for an input
+
 ~~~console
 [user@sahara ~/lecture1/messages]$ cat
 ~~~
+
 2. path to a directory as an argument: The command prints informs us that the thing we are trying to "cat" is a directory
+
 ~~~console
 [user@sahara ~]$ cat lecture1
 cat: lecture1: Is a directory
 [user@sahara ~]$
 ~~~
+
 3. path to a file as an argument: the command prints out the content of the file "en-us.txt"
+
 ```console
 [user@sahara ~]$ cat lecture1/messages/en-us.txt
 Hello World!
 [user@sahara ~]$
 ```
+
+
