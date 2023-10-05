@@ -28,14 +28,14 @@ Share an example of using the command with a path to a file as an argument.
         lecture1
        [user@sahara ~]$ 
        ~~~
-    2. path to a directory as an argument: The command takes the console into the lecture1 directory
+    2. path to a directory as an argument: The command displays all the files and directories in the lecture1 directory
        ~~~
-        [user@sahara ~]$ cd lecture1
-        [user@sahara ~/lecture1]$ 
+        [[user@sahara ~]$ ls lecture1
+        Hello.class  Hello.java  messages  README
+        [user@sahara ~]$
        ~~~
-    3. path to a file as an argument: the command returns an error because en-us.txt is not a directory
-       ~~~
-       [user@sahara ~]$ cd lecture1/messages/en-us.txt
-       bash: cd: lecture1/messages/en-us.txt: Not a directory
-       [user@sahara ~]$ 
-       ~~~
+    3. path to a file as an argument: the command prints the relative path of the file
+       ```console
+       [user@sahara ~]$ ls lecture1/messages/en-us.txt
+       lecture1/messages/en-us.txt
+       ```
