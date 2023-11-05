@@ -39,5 +39,7 @@ Provide:
 ```
 3.The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
 ### Successful Test 
-
+![Alt text](images/successfultest.png "Successful Test")
+### Failure Inducing Test
+![Alt text](images/failedtest.png "Failed Test")
 4.The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
