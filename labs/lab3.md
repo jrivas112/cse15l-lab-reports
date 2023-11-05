@@ -45,3 +45,27 @@ These are the inputs that doesn't induce test failure, as mentioned above.
 These are the inputs that induce test failure, as mentioned above. 
 ![Alt text](images/failedtest.png "Failed Test")
 4.The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
+The error in the reversePlace() method was that we weren't putting anything in reverse into the new array
+called newArray, in addition, we were just returned this array we had alrady inputed and modified. We were not returning
+newArray
+### Bug
+```
+    static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+    return arr;
+  }
+```
+### Solution
+The solution is to properly set newArray to the reverse order of arr and returning newArray as you see below
+```
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+  }
+```
