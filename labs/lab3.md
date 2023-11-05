@@ -21,10 +21,23 @@ Provide:
     assertArrayEquals(new int[]{3,2,1}, ArrayExamples.reversed(input1));
   }
 ```
+2.An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
+```
+ @Test
+    public void testReverseInPlace() {
+        int[] input1 = {3};
+        ArrayExamples.reverseInPlace(input1);
+        assertArrayEquals(new int[]{3}, input1);
+    }
 
-3. An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
 
-4.The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
+    @Test
+    public void testReversed() {
+        int[] input1 = {};
+        assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
+    }
+```
+3.The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
+### Successful Test 
 
-5.The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
-Briefly describe why the fix addresses the issue.
+4.The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
