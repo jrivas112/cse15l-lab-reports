@@ -45,10 +45,10 @@ These are the inputs that doesn't induce test failure, as mentioned above.
 These are the inputs that induce test failure, as mentioned above. 
 ![Alt text](images/failedtest.png "Failed Test")
 4.The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
-The error in the reversePlace() method was that we weren't putting anything in reverse into the new array
+### Bug: reversed()
+The error in the reversed() method was that we weren't putting anything in reverse into the new array
 called newArray, in addition, we were just returned this array we had alrady inputed and modified. We were not returning
 newArray
-### Bug
 ```
     static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
@@ -58,7 +58,7 @@ newArray
     return arr;
   }
 ```
-### Solution
+### Solution: reversed()
 The solution is to properly set newArray to the reverse order of arr and returning newArray as you see below
 ```
   static int[] reversed(int[] arr) {
@@ -69,3 +69,27 @@ The solution is to properly set newArray to the reverse order of arr and returni
     return newArray;
   }
 ```
+### Bug 2: reversedInPlace()
+The bug here is that we are not storing the value we replaced, so if we have the list 1,2,3, when we switch spots between 1 and 3, 3 will go to arr[0] but 1 won't 
+go to arr[2]. We need a temporiry variable to hold the value we are replacing in order to store it in the new index. In addition, we dont wan't to reverse the order for 
+arr.length iterations, we only want to iterare the array for arr.length/2 since we are just replacing an index i for an index arr.length-i.
+```
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+### Solution 2: reversedInPlace()
+The solution is to essentially replace the elementns in indicies i with elements in indices arr.length-i and in addition we implemented the temporary variable in order to store the element we are replacing.
+```
+  static void reverseInPlace(int[] arr) {
+    int temp = 0;
+    for(int i = 0; i < (arr.length/2); i += 1) {
+      temp = arr[i];
+      arr[i] = arr[arr.length-1 - i];
+      arr[arr.length-i-1] = temp;
+    }
+  }
+```
+### Part 2 - Researching Commands
