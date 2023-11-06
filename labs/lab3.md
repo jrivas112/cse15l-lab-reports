@@ -46,7 +46,7 @@ These are the inputs that doesn't induce test failure, as mentioned above.
 ### Failure Inducing Test
 These are the inputs that induce test failure, as mentioned above. 
 ![Alt text](images/failedtest.png "Failed Test")
-4.The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
+4. The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
 ### Bug: reversed()
 The error in the reversed() method was that we weren't putting anything in reverse into the new array
 called newArray, in addition, we were just returned this array we had alrady inputed and modified. We were not returning
