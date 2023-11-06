@@ -11,7 +11,8 @@
   The most relevant argument to this method is the path /add-message and the query after the ? called "s" which tell us that user is inputing a message
 ### 4. How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
   The values that changed are the variables message, count, parameters, and text. Message stores all the text that has been inputed. 
-  count, keeps track of the order. Parameters is changed per request. Finally, text is where we get rid of the + signs from the spaces in the query.
+  count, keeps track of the order. Parameters is changed per request. Finally, text is where we get rid of the + signs from the spaces in the query. In addition, the code detects
+  the message by looking at the url after the ? sign.
   
 ## Part 2:
 ### 1. The path to the private key for your SSH key for logging into ieng6 (on your computer or on the home directory of the lab computer)
