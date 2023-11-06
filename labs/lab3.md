@@ -1,4 +1,4 @@
-## [Lab Report 3 - Bugs and Commands (Week 5)]
+# [Lab Report 3 - Bugs and Commands (Week 5)]
 
 ## Part 1 - Bugs
 Choose one of the bugs from week 4’s lab.
@@ -92,4 +92,97 @@ The solution is to essentially replace the elementns in indicies i with elements
     }
   }
 ```
-### Part 2 - Researching Commands
+## Part 2 - Researching Commands
+### Option 1: Find -name "file", two examples
+This command is useful when you know the name of the file, it will look through all the directories within
+the directory you executed the command from. This is a great command when you can't remember where you saved
+a file.
+#### Example 1:
+```console
+[user@sahara ~/docsearch/technical]$ find -name "chapter-1.txt"
+./911report/chapter-1.txt
+```
+#### Example 2:
+```console
+[user@sahara ~/docsearch/technical]$ find -name "chapter-2.txt"
+./911report/chapter-2.txt
+```
+### Option 2: find -iname, two examples
+If you can't remember the exact name of the file, or you're not sure whether you capitalized any characters, 
+you can do a partial and case-insensitive search like this:
+#### Example 3:
+```console
+[user@sahara ~/docsearch/technical]$ find -iname "*1471-214*txt"
+./biomed/1471-2148-1-1.txt
+./biomed/1471-2148-2-7.txt
+./biomed/1471-2148-2-12.txt
+./biomed/1471-2148-1-6.txt
+./biomed/1471-2148-1-4.txt
+./biomed/1471-2148-2-17.txt
+./biomed/1471-2148-3-3.txt
+./biomed/1471-2148-2-15.txt
+./biomed/1471-2148-2-14.txt
+./biomed/1471-2148-2-5.txt
+./biomed/1471-2148-2-8.txt
+./biomed/1471-2148-1-8.txt
+./biomed/1471-2148-3-1.txt
+./biomed/1471-2148-1-14.txt
+./biomed/1471-2148-3-7.txt
+./biomed/1471-2148-2-2.txt
+./biomed/1471-2148-3-4.txt
+./biomed/1471-2148-3-18.txt
+```
+#### Example 4:
+```console
+[user@sahara ~/docsearch/technical]$ find -iname "*chapter*txt"
+./911report/chapter-13.3.txt
+./911report/chapter-13.2.txt
+./911report/chapter-6.txt
+./911report/chapter-5.txt
+./911report/chapter-8.txt
+./911report/chapter-11.txt
+./911report/chapter-13.4.txt
+./911report/chapter-9.txt
+./911report/chapter-13.1.txt
+./911report/chapter-3.txt
+./911report/chapter-7.txt
+./911report/chapter-13.5.txt
+./911report/chapter-10.txt
+./911report/chapter-2.txt
+./911report/chapter-1.txt
+./911report/chapter-12.txt
+```
+### Option 3: Find, finding and removing file, two examples
+How to find and delete a file with confirmation.
+#### Example 5:
+```console
+[user@sahara ~/docsearch/technical]$ find -name chapter-1.txt -exec rm -i {} \; 
+rm: remove regular file './911report/chapter-1.txt'? Y
+```
+#### Example 6:
+```console
+[user@sahara ~/docsearch/technical]$ find -name 1468-6708-3-4.txt -exec rm -i {} \; 
+rm: remove regular file './biomed/1468-6708-3-4.txt'? y
+```
+### Option 4: Find, finding files by content, two examples
+A search command is not limited to what it can achieve. In reality, find includes an option that lets you run a separate command on any results it provides. 
+This can be especially helpful if you need to search for a file using both criteria, or if you need to search by content instead of name.
+#### Example 7:
+```console
+[user@sahara ~/docsearch/technical]$ find 911report -name "*chapter*txt" -exec grep -Hi penguin {} \;
+911report/chapter-13.3.txt:                (Penguin, 2004), p. 9; Intelligence reports, interrogations of KSM, July 12, 2003;
+911report/chapter-13.3.txt:                to September 10, 2001 (Penguin, 2004), p. 251.
+911report/chapter-13.3.txt:                Invasion to September 10, 2001 (Penguin, 2004), p. 379.
+911report/chapter-13.4.txt:                September 10, 2001 (Penguin, 2004), pp. 487-491; see also ibid., pp. 495-496,
+911report/chapter-13.5.txt:                Margalit and Ian Buruma, Occidentalism: The West in the Eyes of Its Enemies (Penguin
+```
+#### Example 8:
+```console
+[user@sahara ~/docsearch/technical]$ find 911report -name "*chapter*txt" -exec grep -Hi physician {} \;
+911report/chapter-11.txt:                medications. What is missing is the attending physician who makes sure they work as
+911report/chapter-2.txt:                physician, Ayman al Zawahiri, arranged from their Afghan headquarters for an Arabic
+```
+## Sources
+1. https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
+
+2. https://www.redhat.com/sysadmin/linux-find-command#:~:text=The%20find%20command%20is%20one,and%20not%20just%20by%20filename.
