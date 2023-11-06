@@ -6,6 +6,7 @@ Choose one of the bugs from week 4’s lab.
 Provide:
 
 1. A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
+
 ~~~
 @Test 
  public void testReverseInPlace() {
@@ -21,6 +22,7 @@ Provide:
     assertArrayEquals(new int[]{3,2,1}, ArrayExamples.reversed(input1));
   }
 ~~~
+
 2.An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
 ```
  @Test
