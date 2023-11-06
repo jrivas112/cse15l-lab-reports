@@ -16,7 +16,7 @@
 ## Part 2:
 ### 1. The path to the private key for your SSH key for logging into ieng6 (on your computer or on the home directory of the lab computer)
 
-![Alt text](images/publickey.png "Example 3")
+![Alt text](images/try2.png "Example 3")
 
 ### 2. The path to the public key for your SSH key for logging into ieng6 (within your account on ieng6)
 
