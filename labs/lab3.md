@@ -23,7 +23,7 @@ Provide:
   }
 ~~~
 
-2.An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
+2. An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
 ```
  @Test
     public void testReverseInPlace() {
@@ -39,7 +39,7 @@ Provide:
         assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
     }
 ```
-3.The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
+3. The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
 ### Successful Test
 These are the inputs that doesn't induce test failure, as mentioned above. 
 ![Alt text](images/successfultest.png "Successful Test")
