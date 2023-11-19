@@ -100,11 +100,13 @@ This command is useful when you know the name of the file, it will look through 
 the directory you executed the command from. This is a great command when you can't remember where you saved
 a file.
 #### Example 1:
+Here we can see that the command finds teh chapter-1 txt
 ```console
 [user@sahara ~/docsearch/technical]$ find -name "chapter-1.txt"
 ./911report/chapter-1.txt
 ```
 #### Example 2:
+Here we can see that the command finds teh chapter-2 txt
 ```console
 [user@sahara ~/docsearch/technical]$ find -name "chapter-2.txt"
 ./911report/chapter-2.txt
@@ -113,6 +115,7 @@ a file.
 If you can't remember the exact name of the file, or you're not sure whether you capitalized any characters, 
 you can do a partial and case-insensitive search like this:
 #### Example 3:
+Here the command finds names of similar patterns that includes the numbers 1471-214 in the name of the file
 ```console
 [user@sahara ~/docsearch/technical]$ find -iname "*1471-214*txt"
 ./biomed/1471-2148-1-1.txt
@@ -135,6 +138,8 @@ you can do a partial and case-insensitive search like this:
 ./biomed/1471-2148-3-18.txt
 ```
 #### Example 4:
+Here we also see the same thing, it finds the text files that have a simialr pattern in their name
+in this example the pattern is "chapter"
 ```console
 [user@sahara ~/docsearch/technical]$ find -iname "*chapter*txt"
 ./911report/chapter-13.3.txt
@@ -156,12 +161,14 @@ you can do a partial and case-insensitive search like this:
 ```
 ### Option 3: Find, finding and removing file, two examples
 How to find and delete a file with confirmation.
+Here we use the command to confirm that we want to delete the file
 #### Example 5:
 ```console
 [user@sahara ~/docsearch/technical]$ find -name chapter-1.txt -exec rm -i {} \; 
 rm: remove regular file './911report/chapter-1.txt'? Y
 ```
 #### Example 6:
+Here we use the command to confirm that we want to delete the file
 ```console
 [user@sahara ~/docsearch/technical]$ find -name 1468-6708-3-4.txt -exec rm -i {} \; 
 rm: remove regular file './biomed/1468-6708-3-4.txt'? y
@@ -170,6 +177,7 @@ rm: remove regular file './biomed/1468-6708-3-4.txt'? y
 A search command is not limited to what it can achieve. In reality, find includes an option that lets you run a separate command on any results it provides. 
 This can be especially helpful if you need to search for a file using both criteria, or if you need to search by content instead of name.
 #### Example 7:
+In this example the commands find files under the pattern "chapter" and the files have the text "Penguin" in them
 ```console
 [user@sahara ~/docsearch/technical]$ find 911report -name "*chapter*txt" -exec grep -Hi penguin {} \;
 911report/chapter-13.3.txt:                (Penguin, 2004), p. 9; Intelligence reports, interrogations of KSM, July 12, 2003;
@@ -179,6 +187,7 @@ This can be especially helpful if you need to search for a file using both crite
 911report/chapter-13.5.txt:                Margalit and Ian Buruma, Occidentalism: The West in the Eyes of Its Enemies (Penguin
 ```
 #### Example 8:
+In this example the commands find files under the pattern "chapter" and the files have the text "physician" in them
 ```console
 [user@sahara ~/docsearch/technical]$ find 911report -name "*chapter*txt" -exec grep -Hi physician {} \;
 911report/chapter-11.txt:                medications. What is missing is the attending physician who makes sure they work as
