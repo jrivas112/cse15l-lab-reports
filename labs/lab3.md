@@ -40,7 +40,7 @@ Provide:
     }
 ```
 3. The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
-### Successful Test
+### Successful Test (Image is next page!)
 These are the inputs that doesn't induce test failure, as mentioned above. 
 <img src="images/successfultest.png" width="600" height="400">
 ### Failure Inducing Test
