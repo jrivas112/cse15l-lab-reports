@@ -42,10 +42,10 @@ Provide:
 3. The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
 ### Successful Test
 These are the inputs that doesn't induce test failure, as mentioned above. 
-![Alt text](images/successfultest.png "Successful Test")
+<img src="images/successfultest.png" width="600" height="400">
 ### Failure Inducing Test
 These are the inputs that induce test failure, as mentioned above. 
-![Alt text](images/failedtest.png "Failed Test")
+<img src="images/failedtest.png" width="600" height="400">
 4. The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
 ### Bug: reversed()
 The error in the reversed() method was that we weren't putting anything in reverse into the new array
