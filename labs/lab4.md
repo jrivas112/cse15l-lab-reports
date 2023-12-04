@@ -1,6 +1,6 @@
 # Lab Report 4 - Vim (Week 7)
 ### Steps Taken
-1. I logged into the server by doing ```ssh cs15lfa23sj@ieng6.ucsd.edu``` then ```<enter``` then I typed my password <br><img src="images/loginitoserver.png" width=400>
+1. I logged into the server by doing ```ssh cs15lfa23sj@ieng6.ucsd.edu``` then ```<enter``` then I typed my password <br><img src="images/loginintoserver.png" width=400>
 2. I typed ```git clone git@github.com:jrivas112/lab7.git``` then ```<enter>```.
 3. Then I typed ```cd lab7``` to go into the directory then ```<enter>```. <br> <img src="images/cdlab7.png" width=400>
 4. Then I typed ```bash test.sh``` then ```<enter>```, this showed the test's failure.<br><img src="images/Screen Shot 2023-11-19 at 8.38.19 PM.png" width=400>
