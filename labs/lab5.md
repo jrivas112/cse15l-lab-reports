@@ -66,5 +66,14 @@ public static long calculateFactorial(int n) {
 javac factorial/FactorialCalculator.java
 java factorial/FactorialCalculator
 </code></pre>
+
 <h2>A description of what to edit to fix the bug</h2>
 <p>The fault is in the recursive call within the calculateFactorial method in the submitted Java code. To correctly calculate the factorial, instead of removing 2 from n in the recursive call, subtract 1. The student updated the recursive call in the corrected version from calculateFactorial(n - 2) to calculateFactorial(n - 1). This modification ensures that the recursive calculation decrements n by one at each step, resulting in the accurate computation of the factorial.</p>
+
+
+<h1>Reflection</h1>
+<p>
+        I love how I was able to learn a lot of useful commands that will be very applicable in the industry once I'm done with school. I'm 
+        glad I took this course, I learned so many shortcuts in unix that will be very helpful later on. In addition, I'm happy that we had
+        to use GitHub for lab reports because now I know how to set up my own personal GitHub page.
+</p>
