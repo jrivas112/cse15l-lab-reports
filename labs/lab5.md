@@ -41,12 +41,12 @@
 <img src="images/code2.png" alt="Java Program Screenshot" width=500>
 
 <h2>The file & directory structure needed</h2>
-<code>File: FactorialCalculator.java <br>
+<pre><code>File: FactorialCalculator.java <br>
 Directory: /home/factorial
-</code>
+</code></pre>
 <h2>The contents of each file before fixing the bug</h2>
 <p>the content in FactorialCalculator.java</p>
-<code>public class FactorialCalculator {
+<pre><code>public class FactorialCalculator {
 public static void main(String[] args) {
     int number = 6; // just for testing, the issue persists with other values
     long result = calculateFactorial(number);
@@ -60,11 +60,11 @@ public static long calculateFactorial(int n) {
         return n * calculateFactorial(n - 2);
     }
 }
-}</code>
+}</code></pre>
 <h2>The full command line (or lines) you ran to trigger the bug</h2>
-<code>
+<pre><code>
 javac factorial/FactorialCalculator.java
 java factorial/FactorialCalculator
-</code>
+</code></pre>
 <h2>A description of what to edit to fix the bug</h2>
 <p>The fault is in the recursive call within the calculateFactorial method in the submitted Java code. To correctly calculate the factorial, instead of removing 2 from n in the recursive call, subtract 1. The student updated the recursive call in the corrected version from calculateFactorial(n - 2) to calculateFactorial(n - 1). This modification ensures that the recursive calculation decrements n by one at each step, resulting in the accurate computation of the factorial.</p>
