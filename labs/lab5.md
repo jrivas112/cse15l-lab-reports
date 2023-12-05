@@ -28,17 +28,26 @@
         the calculation would be 5*4*3*2*1 as you can see this is like n*(n-1)*(n-2)*(n-3)*(n-4). Does your code 
         do n*factorial(n-1) as in the example above?
 </p>
+<p>
+        In addition feel free to use the following bash script to test your code. Please be sure to run save the bash code inside
+        the directory where you have the java file. You can use this bash file to test different inputs and checks if your code
+        outputs the correct result.
+
+</p>
+<img src="images/code4.png" alt="Java Program Screenshot" width=500>
 
 <h1>Student Post 2</h1>
 <p>
         Hello, thank you so much for the insight. I was able to figure out what was wrong with my code. I was doing 
-        my recursion wrong. Before I had n*calculateFactorial(n-2) instead of n*calculateFactorial(n-1). Thank you so much!
+        my recursion wrong. Before I had n*calculateFactorial(n-2) instead of n*calculateFactorial(n-1). In addition,
+        I change int number = 6 to int number = Integer.valueOf(args[0]); in order to test different inputs better. 
+        Thank you!
 </p>
 <p>
-        Here's a snippet of my correct code:
+        Here's a snippet of my correct code and me testing my code with the bash file:
 </p>
 
-<img src="images/code2.png" alt="Java Program Screenshot" width=500>
+<img src="images/code5.png" alt="Java Program Screenshot" width=500>
 
 <h2>The file & directory structure needed</h2>
 <pre><code>File: FactorialCalculator.java <br>
